@@ -1,0 +1,18 @@
+{% extends 'organizer/base.html'%}
+{% block body %}
+
+<div class="card shadow">
+    <div class="card-header">
+        <h5 class="card-title">Task Update</h5>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-success"  type="submit">Save</button>
+        </form>
+    </div>
+</div>
+<br>
+
+{% endblock %}

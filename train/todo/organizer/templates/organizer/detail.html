@@ -1,0 +1,15 @@
+{% extends 'organizer/base.html'%}
+{% block body %}
+
+<div class="card shadow">
+    <div class="card-body">
+        <h5 class="card-title">{{task.name}}</h5>
+        <p>{{task.priority}}</p>
+        <p>{{task.date}}</p>
+        <a class="btn btn-danger" href="{% url 'delete' task.id%}">Done</a>
+        <a class="btn btn-warning" href="{% url 'update' task.id%}">Update</a>
+    </div>
+</div>
+<br>
+
+{% endblock %}
